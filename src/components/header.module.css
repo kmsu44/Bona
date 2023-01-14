@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+  margin: 5px;
+  align-items: flex-start;
+  height: 70px;
+}
+.title {
+  color: black;
+  text-align: center;
+  line-height: normal;
+  font-family: "Kaisei Opti", serif;
+  font-size: 27px;
+  line-height: 36px;
+  text-decoration: none;
+}
+.icon {
+  font-size: 23px;
+}
+.box {
+  height: 100%;
+  padding: 5px, 0px;
+  margin-left: 5px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.menubtn {
+  width: 24px;
+  height: 24px;
+  background-color: rgb(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+}
+.Menubox {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: rgba(173, 173, 173, 0.5);
+  padding: 10px;
+}
+.category {
+  text-decoration: none;
+  color: black;
+  font-family: "Kaisei Opti", serif;
+}
+.category:hover {
+  color: white;
+}

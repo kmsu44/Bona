@@ -1,0 +1,6 @@
+.footer {
+  position: relative;
+  height: 180px;
+  transform: translateY(-100%);
+  background-color: gray;
+}
