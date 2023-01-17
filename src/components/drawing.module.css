@@ -22,7 +22,10 @@
   }
 }
 .card {
+  height: 100%;
+  display: flex;
   margin: 10px;
+  align-items: center;
 }
 .img {
   width: 100%;
