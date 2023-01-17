@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 10;
   margin: 5px;
   align-items: flex-start;
   height: 70px;
@@ -48,7 +48,8 @@
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 .category {
   text-decoration: none;
