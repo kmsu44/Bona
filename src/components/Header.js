@@ -1,36 +1,35 @@
 import styled from "./header.module.css";
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Header(props) {
-  const [menu, setMenu] = useState(false);
-  const toggleMenu = () => {
-    setMenu((menu) => !menu);
-  };
-  const OpenedMenu = () => {
+  const Menu = () => {
     return (
       <div className={styled.Menubox}>
-        <Link
+        <NavLink
           to="/Drawing"
-          className={styled.category}
-          onClick={() => toggleMenu()}
+          className={({ isActive }) =>
+            isActive ? styled.activeStyle : styled.category
+          }
         >
           Drawing
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/Note"
-          className={styled.category}
-          onClick={() => toggleMenu()}
+          className={({ isActive }) =>
+            isActive ? styled.activeStyle : styled.category
+          }
         >
           Note
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/Product"
-          className={styled.category}
-          onClick={() => toggleMenu()}
+          className={({ isActive }) =>
+            isActive ? styled.activeStyle : styled.category
+          }
         >
           Product
-        </Link>
+        </NavLink>
       </div>
     );
   };
@@ -38,18 +37,14 @@ function Header(props) {
     <div>
       <div className={styled.container}>
         <div className={styled.box}>
-          <button className={styled.menubtn} onClick={() => toggleMenu()}>
-            <AiOutlineMenu className={styled.icon} />
-          </button>
-        </div>
-        <div className={styled.box}>
           <Link to="/" className={styled.title}>
             Bona's Drawing
           </Link>
         </div>
-        <div className={styled.menubtn}></div>
       </div>
-      <div>{menu ? <OpenedMenu /> : <div></div>}</div>
+      <div className={styled.menucontainer}>
+        <Menu />
+      </div>
     </div>
   );
 }

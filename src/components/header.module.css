@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   gap: 10px;
   margin: 5px;
@@ -8,7 +8,7 @@
   height: 70px;
 }
 .title {
-  color: black;
+  color: rgb(73, 73, 73);
   text-align: center;
   line-height: normal;
   font-family: "Kaisei Opti", serif;
@@ -44,14 +44,23 @@
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  background-color: rgba(173, 173, 173, 0.5);
+  /* background-color: rgba(173, 173, 173, 0.5); */
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
   padding: 10px;
+  margin-bottom: 30px;
 }
 .category {
   text-decoration: none;
-  color: black;
+  color: rgb(111, 111, 111);
   font-family: "Kaisei Opti", serif;
 }
 .category:hover {
-  color: white;
+  color: black;
+}
+
+.activeStyle {
+  text-decoration: none;
+  color: black;
+  font-family: "Kaisei Opti", serif;
 }

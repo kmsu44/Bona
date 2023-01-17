@@ -2,5 +2,5 @@
   position: relative;
   height: 180px;
   transform: translateY(-100%);
-  background-color: gray;
+  border-top: 1px solid #e2e2e2;
 }
