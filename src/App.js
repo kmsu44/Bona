@@ -11,7 +11,7 @@ import sample2 from "./img/sample2.jpeg";
 import sample3 from "./img/sample3.jpeg";
 
 function App() {
-  const data = [
+  const drawingdata = [
     {
       id: 1,
       src: sample,
@@ -73,17 +73,43 @@ function App() {
       text: "이 작품과 같이 중앙 패널과 개폐가 가능한 좌우의 날개 부분으로이루어진 작품을 ”세 폭 제단화(트립틱)”이라고 합니다. 이것은 전패널을 횡단하는 풍경을 배경으로, 중앙에는 “그리스도 십자가형”이, 양날개 부분에는 무릎을 꿇고 기도하는 성화 기증자(기진자) 부부가 그려져있습니다. 클레베는 16세기 전반의 안트워프에서 활약한 화가로, 넓은파노라마 화면 속에 기괴한 암석 등의 세부를 세밀하게 그려 넣은 풍경묘사는 16세기 플랑드르 풍경화의 특색을 잘 보여줍니다.",
     },
   ];
+  const productdata = [
+    {
+      id: 1,
+      src: sample,
+      title: "Happy",
+      price: 1000,
+    },
+    {
+      id: 2,
+      src: sample2,
+      title: "Happy",
+      price: 1000,
+    },
+    {
+      id: 3,
+      src: sample2,
+      title: "Happy",
+      price: 1000,
+    },
+    {
+      id: 4,
+      src: sample2,
+      title: "Happy",
+      price: 1000,
+    },
+  ];
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Drawing" element={<Drawing data={data} />} />
+        <Route path="/Drawing" element={<Drawing data={drawingdata} />} />
         <Route path="/Note" element={<Note />} />
-        <Route path="/Product" element={<Product />} />
+        <Route path="/Product" element={<Product data={productdata} />} />
         <Route
           path="/DrawingDetail/:id"
-          element={<DrawingDetail data={data} />}
+          element={<DrawingDetail data={drawingdata} />}
         />
       </Routes>
       <Footer />
